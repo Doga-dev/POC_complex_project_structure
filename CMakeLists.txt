@@ -53,11 +53,10 @@ add_subdirectory(${LIB_PRJ_DIR} ${LIB_OBJ_DIR})
 # Include the include directories and libraries defined in libs
 include_directories(${DEPS_LIBS_INCS})
 
-# Set QML import paths
-foreach(path ${QML_IMPORT_PATHS})
-    list(APPEND QML_IMPORT_PATH ${path})
-endforeach()
-set(ENV{QML_IMPORT_PATH} ${QML_IMPORT_PATH})
+# Set QML_IMPORT_PATH environment variable
+set(QML_IMPORT_PATH "${QML_IMPORT_PATHS}" CACHE STRING "Path to QML modules")
+add_compile_definitions(QML_IMPORT_PATH="${QML_IMPORT_PATH}")
+message(NOTICE "++++ All QML Import path: ${QML_IMPORT_PATH}")
 
 message(NOTICE "==> DEPENDS LIBS in root are ${DEPS_LIBS}.")
 message(NOTICE "==> DEPENDS LIBS QMAKE in root are ${DEPS_LIBS_QMAKE}.")

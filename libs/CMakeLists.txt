@@ -40,8 +40,8 @@ foreach(dir ${subDirectories})
             message(DEBUG "Found QMake Libraries sub-directory: ${dir}")
 
             # Check if it is a QML module
-            if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${dir}/qmldir")
-                list(APPEND QML_IMPORT_PATHS "${CMAKE_CURRENT_SOURCE_DIR}/${dir}")
+            if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${dir}/gui/qmldir")
+                list(APPEND QML_IMPORT_PATHS "${CMAKE_CURRENT_SOURCE_DIR}/${dir}/gui")
             endif()
         endif()
     endif()

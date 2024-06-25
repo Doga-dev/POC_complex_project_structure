@@ -17,7 +17,10 @@ RESOURCES += gui/qml.qrc
 # Use the DESTDIR variable for the output directory
 DESTDIR = $$DESTDIR
 
+# Specify the path to qmldir
+qmldir.files = gui/qmldir
+qmldir.path = $$OUT_PWD/gui
+
 # Define the QML module
-qmldir.files = qmldir
 INSTALLS += qmldir
 

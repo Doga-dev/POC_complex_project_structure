@@ -10,6 +10,8 @@ headerApp()
 setProject("0.0.2" "Proof of concept application")
 
 
+dependency(graphics)
+
 
 set(PROJECT_INTERFACES
 )
