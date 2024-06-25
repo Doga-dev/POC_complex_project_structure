@@ -10,5 +10,7 @@ ApplicationWindow {
     Button {
         text: qsTr("Press Me")
         anchors.centerIn: parent
+        onPressed: text = qsTr("Pressed")
+        onReleased: text = qsTr("Released")
     }
 }
