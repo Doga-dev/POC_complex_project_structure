@@ -163,6 +163,7 @@ endmacro()
 macro(configureLinkAndInstall)
     message(DEBUG "'${PROJECT_NAME}' INCS : ${DEPS_LIBS_INCS}")
     target_include_directories(${PROJECT_NAME} PUBLIC ${DEPS_LIBS_INCS})
+    target_link_directories(${PROJECT_NAME} PUBLIC ${PROJECT_OUTPUT})
 
     if (NOT "${PROJ_DEPENDS_QMAKE}" STREQUAL "")
         message(VERBOSE "QMAKE DEPENDS for project '${PROJECT_NAME}' : ${PROJ_DEPENDS}")

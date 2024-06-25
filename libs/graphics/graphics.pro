@@ -2,7 +2,7 @@ QT += qml quick
 
 TEMPLATE = lib
 CONFIG += plugin
-TARGET = Graphics
+TARGET = graphics
 
 INCLUDEPATH += include
 
@@ -13,6 +13,9 @@ SOURCES += source/graphics.cpp \
            
 
 RESOURCES += gui/qml.qrc
+
+# Use the DESTDIR variable for the output directory
+DESTDIR = $$DESTDIR
 
 # Define the QML module
 qmldir.files = qmldir

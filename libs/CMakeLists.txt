@@ -28,7 +28,7 @@ foreach(dir ${subDirectories})
             # Create a target to build QMake project
             add_custom_target(${dir}_qmake ALL
                 COMMAND ${CMAKE_COMMAND} -E make_directory ${QMAKE_BINARY_DIR}
-                COMMAND ${CMAKE_COMMAND} -E chdir ${QMAKE_BINARY_DIR} ${QMAKE_EXECUTABLE} ${QMAKE_PROJECT_DIR}/${dir}.pro
+                COMMAND ${CMAKE_COMMAND} -E chdir ${QMAKE_BINARY_DIR} ${QMAKE_EXECUTABLE} ${QMAKE_PROJECT_DIR}/${dir}.pro "DESTDIR=${PROJECT_OUTPUT}"
                 COMMAND ${CMAKE_COMMAND} -E chdir ${QMAKE_BINARY_DIR} make
                 COMMENT "Building QMake project: ${dir}"
             )
