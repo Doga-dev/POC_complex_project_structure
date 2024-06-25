@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>UiButton.qml</file>
+        <file>UiLabel.qml</file>
+    </qresource>
+</RCC>
+
